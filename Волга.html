@@ -1,0 +1,662 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>МРФ «Волга»</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <style type="text/css">
+        body {
+            min-width: 900px;
+        }
+
+        #pole_size {
+            width: 100%;
+        }
+
+        #main_pole {
+            min-width: 790px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: auto;
+            height: 80px;
+            background: #9db1cc;
+            padding: 0 0 40px 16px;
+        }
+
+        #middle {
+            width: 100%;
+            padding: 0 0 70px;
+            height: 1%;
+            position: relative;
+        }
+
+            #middle:after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+        #container {
+            width: 100%;
+            float: left;
+            background: White;
+        }
+
+        #content {
+            padding: 0 250px 0 10px;
+        }
+
+
+        #right_bar {
+            float: left;
+            width: 240px;
+            margin-left: -240px;
+            background: #F1FFE4;
+        }
+
+        #footer {
+            width: 100%;
+            margin: -70px auto 0;
+            height: 70px;
+            background: #B6E781;
+            font-size: 16px;
+        }
+
+        p {
+            margin: 16px 10px 20px;
+        }
+
+        a {
+            color: Green;
+            outline: none;
+            text-decoration: underline;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+
+
+
+        ul.menu {
+            margin: auto;
+            padding: 0;
+            height: 30px;
+            width: 100%;
+            background: #3a6cb1;
+        }
+
+            ul.menu li {
+                background: url("gor_menu_punkt.png") 12px 5px no-repeat;
+                float: left;
+                list-style: none;
+            }
+
+                ul.menu li a {
+                    color: White;
+                    display: block;
+                    padding: 6px 32px 0px;
+                    text-decoration: none;
+                }
+
+                    ul.menu li a:hover {
+                        background: url("gor_menu_hover.png") 12px 5px no-repeat;
+                    }
+
+                ul.menu li ul {
+                    display: none;
+                    margin-left: 12px;
+                    padding: 0px;
+                }
+
+                ul.menu li:hover ul {
+                    display: block;
+                    position: absolute;
+                }
+
+                    ul.menu li:hover ul li {
+                        float: none;
+                    }
+
+            ul.menu ul li {
+                background: #75C808;
+                padding: 6px 12px 0px;
+            }
+
+                ul.menu ul li:hover {
+                    background: #C0EC2D;
+                    padding: 6px 12px 0px;
+                }
+
+                ul.menu ul li a {
+                    color: Black;
+                    padding: 6px 12px 0px;
+                }
+
+                    ul.menu ul li a:hover {
+                        background: #C0EC2D;
+                        color: Black;
+                        padding: 6px 12px 0px;
+                    }
+
+            ul.menu li:hover ul li a {
+                padding: 0px 0 8px;
+            }
+        /*мигающий цвет*/
+        .pouring {
+            font-size: 40px;
+            line-height: auto;
+            font-family: Verdana, sans-serif;
+            font-weight: 900;
+            position: relative;
+            background: #9db1cc;
+            overflow: hidden;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+            .pouring:before {
+                content: '';
+                position: absolute;
+                filter: blur(10px);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                mix-blend-mode: screen;
+                background-image: repeating-linear-gradient(-45deg, transparent, transparent 1em, #BFE2FF 1em, #337AB7 50%), repeating-linear-gradient(45deg, #337AB7, #337AB7 1em, #FFF 1em, #BFE2FF 50%);
+                background-size: 3em 3em, 2em 2em;
+                animation-name: ani;
+                animation-duration: 25s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+        @keyframes ani {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 100% 0;
+            }
+        }
+
+        @media (max-width:690px) {
+            .pouring {
+                font-size: 20px;
+            }
+        }
+
+        #timeN {
+            font-size: 25px;
+            background: #928cef;
+            text-align: center;
+            position: relative;
+            margin: auto;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body bgcolor="#DEB887">
+
+
+
+
+    <div id="main_pole">
+
+        <div class="pouring">Ростелеком. МРФ «Волга»</div>
+        <div class="timeing" style="background: #9db3da; font-size: 25px;">
+            <script type="text/javascript">
+
+                var months = new Array(13);
+                months[1] = "января";
+                months[2] = "февраля";
+                months[3] = "марта";
+                months[4] = "апреля";
+                months[5] = "мая";
+                months[6] = "июня";
+                months[7] = "июля";
+                months[8] = "августа";
+                months[9] = "сентября";
+                months[10] = "октября";
+                months[11] = "ноября";
+                months[12] = "декабря";
+
+                var time = new Date();
+                var thismonth = months[time.getMonth() + 1];
+                var date = time.getDate();
+                var thisyear = time.getFullYear();
+                var day = time.getDay() + 1;
+
+                if (thisyear < 2000)
+                    thisyear = thisyear + 1900;
+                if (day == 1) DayofWeek = "Воскресенье.";
+                if (day == 2) DayofWeek = "Понедельник.";
+                if (day == 3) DayofWeek = "Вторник.";
+                if (day == 4) DayofWeek = "Среда.";
+                if (day == 5) DayofWeek = "Четверг.";
+                if (day == 6) DayofWeek = "Пятница.";
+                if (day == 7) DayofWeek = "Суббота.";
+
+                document.write("<center>" + date + " ");
+                document.write(thismonth + " " + thisyear + " " + "года" + "," + " " + DayofWeek + "<\/center>");
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+
+                function timeBegan() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('timeN').innerHTML = h + ":" + m + ":" + s;
+                    t = setTimeout(function () {
+                        timeBegan()
+                    }, 500);
+                }
+                timeBegan();
+            </script>
+        </div>
+        <div id="timeN">
+            <script type="text/javascript">
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+
+                function timeBegan() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('timeN').innerHTML = h + ":" + m + ":" + s;
+                    t = setTimeout(function () {
+                        timeBegan()
+                    }, 500);
+                }
+                timeBegan();
+            </script>
+        </div>
+
+        <div id="middle">
+            <ul class="menu">
+                <li><a href="Главная.html">Главная</a></li>
+                <li>
+                    <a href="Волга.html">МРФ «Волга»</a>
+
+                </li>
+                <li><a href="Сибирь.html">МРФ «Сибирь»</a></li>
+                <li>
+                    <a href="Корпоративный центр.html">Корпоративный центр</a>
+
+                </li>
+                <li><a href="Контакты.html">Контакты</a></li>
+                <li><a href="Login_v8\Login_v8\index.html">Вход | Регистрация</a></li>
+            </ul>
+
+            <div id="container">
+
+                <div id="content">
+                    <h3>Информация о макрорегионе</h3>
+                    <p>
+                        Макрорегиональный филиал «Волга» ПАО «Ростелеком» (МРФ «Волга») — структурное подразделение компании «Ростелеком», которое предоставляет услуги на территории Приволжского федерального округа.
+                    </p>
+
+
+                    <p>
+                        МРФ «Волга» объединяет 12 региональных филиалов: в Кировской, Нижегородской, Оренбургской, Пензенской,
+                        Самарской, Саратовской, Ульяновской областях, в Удмуртской и Чувашской республиках и республиках Марий Эл, Мордовия и Татарстан.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        МРФ «Волга» располагает магистральными каналами связи, а также сетями местной фиксированной телефонной связи. На территории Поволжья
+                        «Ростелеком» оказывает полный комплекс современных телекоммуникационных сервисов, включая проводную и мобильную телефонную связь, скоростной доступ в
+                        интернет, интерактивное телевидение, облачные решения для частных и корпоративных клиентов, а также органов государственной власти.
+                        <br>
+                        <br>
+                        <i>
+                            Количество интернет-пользователей широкополосного доступа превышает 2,1 млн, из них более 1,5 млн получают услуги по оптической сети передачи данных. Свыше миллиона абонентов смотрят
+                            уникальный федеральный продукт «Интерактивное ТВ». Всего абонентская база МРФ «Волга» насчитывает более 5,3 млн клиентов.
+                        </i>
+                        <br>
+
+                        <br>
+                        <br>
+                        <div style="height:78px; width:512px;  margin: auto; background-color:#EDEDED;
+border-left:4px solid #8B8B8B;" align="center">
+                            <q>Каждый день становится лучше, если мы будем делать его лучше. Ростелеком - платформа для воплощения идей, делающих жизнь Ростелекомичнее.</q>
+                    <p align="right"><sub>
+    Зима
+    Иван Иванович
+</sub></p>
+                </div>
+                </p>
+                <div class="main-container-wrapper">
+                    <header>
+                        <button class="header__btn header__btn--left" title="Menu">
+                            <svg class="icon" width="20px" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#fff" d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z" />
+                            </svg>
+                        </button>
+                        <button class="header__btn header__btn--right" title="Add event">
+                            <svg class="icon" width="26px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="#fff" d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z" />
+                            </svg>
+                        </button>
+                    </header>
+                    <main>
+                        <div class="calendar-container">
+                            <div class="calendar-container__header">
+                                <button class="calendar-container__btn calendar-container__btn--left" title="Previous">
+                                    <i class="icon ion-ios-arrow-back"></i>
+                                </button>
+                                <h2 class="calendar-container__title">Октябрь 2020</h2>
+                                <button class="calendar-container__btn calendar-container__btn--right" title="Next">
+                                    <i class="icon ion-ios-arrow-forward"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-container__body">
+                                <div class="calendar-table">
+                                    <div class="calendar-table__header">
+                                        <div class="calendar-table__row">
+                                            <div class="calendar-table__col">Пн</div>
+                                            <div class="calendar-table__col">Вт</div>
+                                            <div class="calendar-table__col">Ср</div>
+                                            <div class="calendar-table__col">Чт</div>
+                                            <div class="calendar-table__col">Пт</div>
+                                            <div class="calendar-table__col">Сб</div>
+                                            <div class="calendar-table__col">Вс</div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-table__body">
+                                        <div class="calendar-table__row">
+                                            <div class="calendar-table__col calendar-table__inactive">
+                                                <div class="calendar-table__item">
+                                                    <span>30</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__today">
+                                                <div class="calendar-table__item">
+                                                    <span>1</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>2</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>4</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__event">
+                                                <div class="calendar-table__item">
+                                                    <span>5</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>6</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-table__row">
+                                            <div class="calendar-table__col calendar-table__event">
+                                                <div class="calendar-table__item">
+                                                    <span>7</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>8</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>9</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>10</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>11</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>12</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>13</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-table__row">
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>14</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>15</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--start">
+                                                <div class="calendar-table__item">
+                                                    <span>16</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__event calendar-table__event--long">
+                                                <div class="calendar-table__item">
+                                                    <span>17</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--end">
+                                                <div class="calendar-table__item">
+                                                    <span>18</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>19</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-table__row">
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>22</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>23</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>24</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>25</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>26</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--start">
+                                                <div class="calendar-table__item">
+                                                    <span>27</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-table__row">
+                                            <div class="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--end">
+                                                <div class="calendar-table__item">
+                                                    <span>28</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>29</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>30</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col">
+                                                <div class="calendar-table__item">
+                                                    <span>31</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__event calendar-table__inactive">
+                                                <div class="calendar-table__item">
+                                                    <span>1</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__inactive">
+                                                <div class="calendar-table__item">
+                                                    <span>2</span>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-table__col calendar-table__inactive">
+                                                <div class="calendar-table__item">
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-container">
+                            <span class="events__title">Предстоящие события</span>
+                            <ul class="events__list">
+                                <li class="events__item">
+                                    <div class="events__item--left">
+                                        <span class="events__name">Встреча с коллегами</span>
+                                        <span class="events__date">Окт 5</span>
+                                    </div>
+                                    <span class="events__tag">16:00</span>
+                                </li>
+                                <li class="events__item">
+                                    <div class="events__item--left">
+                                        <span class="events__name">Санитарная обработка помещений</span>
+                                        <span class="events__date">Окт 7</span>
+                                    </div>
+                                    <span class="events__tag">10:00</span>
+                                </li>
+                                <li class="events__item">
+                                    <div class="events__item--left">
+                                        <span class="events__name">Конференция на выезде</span>
+                                        <span class="events__date">Окт 16 - Окт 18</span>
+                                    </div>
+                                    <span class="events__tag events__tag--highlighted">Все дни</span>
+                                </li>
+                                <li class="events__item">
+                                    <div class="events__item--left">
+                                        <span class="events__name">Визит президента компании</span>
+                                        <span class="events__date">Окт 27 - Окт 28</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <div id="right_bar">
+
+            <h4 align="center">Даты праздников</h4>
+
+            <table align="center" width="230" border="1" cellspacing="2" cellpadding="8">
+                <tr>
+                    <td>27.04- День основания компании</td>
+                </tr>
+                <tr>
+                    <td>09.02- День рождения компании</td>
+                </tr>
+                <tr>
+                    <td>15.03- День памяти погибших солдат</td>
+                </tr>
+                <tr>
+                </tr>
+
+            </table>
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <div id="footer">
+        <br>
+        <b>Не забывайте нам писать по адресу: г. Москва, ул. Новый Арбат д.1. &ensp; Также Вы можете связаться с нами по телефону:89105489845</b>
+
+    </div>
+
+    </div>
+
+
+</body>
+</html>
